@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Github</title>
+</head>
+
+<body style="background-color:black;font-family:courier;color:#05fa0d;">
+	<span id="content"></span><span style="height:20px;width:20px;background-color:#05fa0d;">&nbsp;</span>
+    <script>
+      var menu = [
+          "Hey Reader!",
+          "I'm Mark, also known as Constcat online.",
+          " ",
+          "You might know me off of Discord (Constcat#0001)",
+          "This page is currently being worked on throughout my school year.", 
+          "Please don't be critical of it.",
+          " ",
+          "This is the end for now :D"
+        ],
+        i = 0, j, item, html,
+        e = document.getElementById("content"),
+        doChar = function() {
+          e.innerHTML += item[j++];
+          if (j < item.length) {
+            setTimeout(doChar, 10);
+          }
+          else {
+            e.innerHTML += "<br/>"; 
+            doItem();
+          }
+        },
+        doItem = function() {
+          if (i < menu.length) {
+            item = menu[i++];
+            j = 0;
+            doChar();
+          }
+        };
+      doItem();
+    </script>
+  </body>
+</html>
